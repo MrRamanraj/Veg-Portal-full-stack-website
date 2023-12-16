@@ -1,0 +1,129 @@
+{% load static%}
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url({% static 'image\vegetable-photos.jpeg'%}) center center;
+
+        }
+
+        h1 {
+            color: orange;
+            border: 2px solid white;
+            backdrop-filter: blur(20px);
+            display: inline-block;
+            border-radius: 5px;
+            padding: 0 130px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background-color: rgb(81, 3, 3);
+            width: 25%;
+            padding: 15px;
+            color: whitesmoke;
+            border: none;
+            float: center;
+            font-size: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px gray;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 50%;
+            font-size: 15px;
+            margin: 8px 0px;
+            padding: 12px 12px;
+            display: block;
+            border: 2px solid rgb(81, 3, 3);
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .border {
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            backdrop-filter: blur(20px);
+            padding-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover,
+        a:hover {
+            background: whitesmoke;
+            color: black;
+
+        }
+
+        .container {
+            padding: 0px;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 8%;
+            border-radius: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: rgb(81, 3, 3);
+            /* width: 25%; */
+            padding: 5px 15px;
+            color: whitesmoke;
+            border: none;
+            float: center;
+            font-size: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px gray;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Login Form</h1>
+    </center>
+    <form action="#" method="post">
+        {% csrf_token %}
+        {% load static %}
+        <center>
+            <div class="container">
+                <div class="imgcontainer">
+                    <img src="{% static 'avatar_img1.jpg' %}" alt="Avatar" class="avatar">
+                </div>
+                <div class="border">
+                    <label for='email'><b>UserEmail : </b></label>
+                    <input type="email" placeholder="Enter email" name="email" float="right" required><br>
+                    <label for='password'><b>Password : </b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required><br>
+                    <button type="submit"><b>Login</b></button><br>
+                    Don't have account <a href="http://localhost:8000"> register </a>
+                </div>
+            </div>
+        </center>
+    </form>
+</body>
+
+</html>

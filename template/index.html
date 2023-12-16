@@ -1,0 +1,576 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Grocery Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css\index.css' %}">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> VEG PORTAL </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <!-- <a href="#categories">categories</a> -->
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn" onclick="myFuction()"></div>
+            <a href="http://localhost:8000/login/" class="btn btn12"> Log Out</a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <form action="index.html" class="login-form" onSubmit="return validateForm1()">
+            {{un}}
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>fresh and <span>organic</span> products for your</h3>
+            <p>Our Aim to supply a best quality vegitables and fruits for you.we collect only inorganic fruits and
+                vegitables from directly,and there is no adding chemical and coloured ..</p>
+            <a href="#products" class="btn">shop now</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- features section starts  -->
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> our <span>features</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/feature-img-1.png' %}" alt="">
+                <h3>fresh and organic</h3>
+                <p>Organic foods are often fresher than their conventional counterparts</p>
+                <!-- <a href="#" class="btn">read more</a> -->
+            </div>
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/feature-img-2.png' %}" alt="">
+                <h3>free delivery</h3>
+                <p> Free delivery all over Bihar.</p>
+                <!-- <a href="#" class="btn">read more</a> -->
+            </div>
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/feature-img-3.png' %}" alt="">
+                <h3>easy payments</h3>
+                <p>You can pay easily cash on delivery</p>
+                <!-- <a href="#" class="btn">read more</a> -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- features section ends -->
+
+    <!-- products section starts  -->
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> our <span>products</span> </h1>
+
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pro-1.webp' %}" alt="">
+                    <h3>fresh Cauliflower</h3>
+                    <div class="price">₹30/KG</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-2.png' %}" alt="">
+                    <h3>fresh onion</h3>
+                    <div class="price">₹10/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pro-3.png' %}" alt="">
+                    <h3>fresh Capsicum</h3>
+                    <div class="price">₹50/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-4.png' %}" alt="">
+                    <h3>fresh cabbage</h3>
+                    <div class="price"> ₹25/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-5.png' %}" alt="">
+                    <h3>fresh potato</h3>
+                    <div class="price"> ₹15/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-6.png' %}" alt="">
+                    <h3>fresh avocado</h3>
+                    <div class="price"> ₹30/KG</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-7.png' %}" alt="">
+                    <h3>fresh carrot</h3>
+                    <div class="price"> ₹76/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-8.png' %}" alt="">
+                    <h3>green lemon</h3>
+                    <div class="price">₹120/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-9.png' %}" alt="">
+                    <h3>corn</h3>
+                    <div class="price">₹78/KG</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-10.png' %}" alt="">
+                    <h3>Cucumber</h3>
+                    <div class="price">₹10/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-11.png' %}" alt="">
+                    <h3>fresh mushroom</h3>
+                    <div class="price">₹60/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-12.png' %}" alt="">
+                    <h3>green chilli</h3>
+                    <div class="price"> ₹25/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-13.png' %}" alt="">
+                    <h3>fresh Peas</h3>
+                    <div class="price"> ₹45/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-14.png' %}" alt="">
+                    <h3>fresh broccoli</h3>
+                    <div class="price"> ₹30/KG</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-15.png' %}" alt="">
+                    <h3>fresh ladies finger</h3>
+                    <div class="price"> ₹76/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/product-16.png' %}" alt="">
+                    <h3>pumpkin</h3>
+                    <div class="price">₹120/KG </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- products section ends -->
+
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> customer's <span>review</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pic-1.png' %}" alt="">
+                    <p>This website is use full for fresh and organic products.</p>
+                    <h3>Vipul Dwivedi</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pic-2.png' %}" alt="">
+                    <p>Best product, so i like this portal..</p>
+                    <h3>Akriti Raj</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pic-3.png' %}" alt="">
+                    <p>Anyone use this portal beacouse it is best.</p>
+                    <h3>Asim Anand</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    {% load static %} <img src="{% static 'image/pic-4.png' %}" alt="">
+                    <p>Awesome product delivery experiance.</p>
+                    <h3>Sonali Shukla</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> our <span>blogs</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/blog-1.jpg' %}" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by Raman </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 1st april, 2021 </a>
+                    </div>
+                    <h3>Health Benefits of Organic</h3>
+                    <p>As they say, nothing can beat nature. With many people turning vegan, organic products are the
+                        new definition of modern living. Organic products are healthier, fresher, and richer in taste.
+                        Healthy eating has endless advantages, and considering healthy food to be tasteless is quite..
+                    </p>
+                    <!-- <a href="#" class="btn">read more</a> -->
+                </div>
+            </div>
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/blog-2.jpg' %}" alt="">>
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by anubhav </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 11st october, 2021 </a>
+                    </div>
+                    <h3>Organic vs Non Organic Food Facts</h3>
+                    <p>Often, we come across this question - what is organic food and why is it better than regular
+                        food? The answer is simple, the term ‘organic’ refers to the way the food is produced. Organic
+                        means lesser or no use of chemicals, no preservatives.</p>
+                    <!-- <a href="#" class="btn">read more</a> -->
+                </div>
+            </div>
+
+            <div class="box">
+                {% load static %} <img src="{% static 'image/blog-3.jpg' %}" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by Satish </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 1st june, 2022 </a>
+                    </div>
+                    <h3>The Big Debate – Organic Spice vs Regular Spice! Which One’s Better?</h3>
+                    <p>People these days think that organic farming is all a FAD, however, organic farming was
+                        considered a conventional farming method back in the day. When it comes to choosing organic
+                        food, we usually buy organically grown rice, wheat, pulses, sugar, etc., but tend to..</p>
+                    <!-- <a href="#" class="btn">read more</a> -->
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> VEG PORTAL <i class="fas fa-shopping-basket"></i> </h3>
+                <p>Our site make you great deals and best policy ,great delivery at a time,and return policy.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +91-9454567890 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +91-8292223333 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> vegportal@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Bihar, Patna - 842001 </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#features" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="#products" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <!-- <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a> -->
+                <a href="#review" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                <a href="#blogs" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="{%static 'javascript\script.js' %}"></script>
+
+</body>
+
+</html>
